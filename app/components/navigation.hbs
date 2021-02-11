@@ -1,19 +1,7 @@
-{{#if @isVisible}}
-  {{#let
-    (if @href
-      @href
-      (if (log-return @queryParams)
-        (href-to @routeName @queryParams)
-        (href-to @routeName)
-      )
-    ) as |href|}}
-    <li
-      class="sub-nav__item {{if this.isActive "active"}}"
-      data-test-sub-nav={{@testSelector}}
-    >
-      <a class="sub-nav__link" href={{href}}>
-        {{yield}}
-      </a>
-    </li>
-  {{/let}}
-{{/if}}
+{{#let
+  (if (log-return @alwaysUndefined)
+    (log-params-return-list @param1 @alwaysUndefined)
+    (log-params-return-list @param1)
+  ) as |myVar|}}
+  <p>MyVar value is: <pre>{{myVar}}</pre></p>
+{{/let}}
