@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'foobar',
+    modulePrefix: 'my-app',
     environment,
     rootURL: '/',
     locationType: 'auto',

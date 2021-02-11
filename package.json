@@ -1,8 +1,8 @@
 {
-  "name": "foobar",
+  "name": "my-app",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for foobar goes here",
+  "description": "Small description for my-app goes here",
   "repository": "",
   "license": "MIT",
   "author": "",
@@ -15,7 +15,7 @@
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:hbs": "ember-template-lint .",
     "lint:js": "eslint .",
-    "start": "ember serve",
+    "start": "JOBS=1 ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test"
   },
