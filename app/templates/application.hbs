@@ -1,1 +1,13 @@
 <Navigation @routeName="foo" @isVisible={{true}}/>
+
+<p>
+  When using the inline "if" helper in Ember 3.17-3.21 both result cases are executed/evaluated despite the test value.
+</p>
+
+<p>
+  The expected result is that the "if" helper does not compute deep results until the logic test has been evaluated.
+</p>
+
+<p>
+  Ember 3.22 does seem to fix this behavior, but LTS 3.20 still has this error currently.
+</p>
