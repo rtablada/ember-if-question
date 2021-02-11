@@ -1,5 +1,12 @@
 {{#if @isVisible}}
-  {{#let (if @href @href (if (log-return @queryParams) (href-to @routeName @queryParams) (href-to @routeName))) as |href|}}
+  {{#let
+    (if @href
+      @href
+      (if (log-return @queryParams)
+        (href-to @routeName @queryParams)
+        (href-to @routeName)
+      )
+    ) as |href|}}
     <li
       class="sub-nav__item {{if this.isActive "active"}}"
       data-test-sub-nav={{@testSelector}}
