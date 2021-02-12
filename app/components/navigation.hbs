@@ -1,7 +1,6 @@
-{{#let
-  (if (log-return @alwaysUndefined)
-    (log-params-return-list @param1 @alwaysUndefined)
+<p>MyVar value is:
+  <pre>{{if true
     (log-params-return-list @param1)
-  ) as |myVar|}}
-  <p>MyVar value is: <pre>{{myVar}}</pre></p>
-{{/let}}
+    (log-params-return-list false)}}
+  </pre>
+</p>
